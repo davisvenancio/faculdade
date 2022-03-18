@@ -10,6 +10,69 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {     font-family: 'Source Sans Pro', sans-serif;}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 </style>
 <body class="w3-light-grey">
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -42,6 +105,7 @@ html,body,h1,h2,h3,h4,h5,h6 {     font-family: 'Source Sans Pro', sans-serif;}
         <a href="javascript:void(0)" class="w3-bar-item tablink w3-button w3-green" onclick="mostrarDiv(event, 'estudosA');">Estudos Atuais</a>
         <a href="javascript:void(0)" class="w3-bar-item tablink w3-button" onclick="mostrarDiv(event, 'estudosF');">Estudos Futuros</a>
         <a href="javascript:void(0)" class="w3-bar-item tablink w3-button" onclick="mostrarDiv(event, 'grade');">Grade Curricular</a>
+        <a href="javascript:void(0)" class="w3-bar-item tablink w3-button" onclick="mostrarDiv(event, 'contato');">Contato</a>
       </div> 
       <section>
         <div class="w3-container w3-card w3-white w3-margin-bottom div" id="estudosA" style="display:block">
@@ -123,22 +187,41 @@ html,body,h1,h2,h3,h4,h5,h6 {     font-family: 'Source Sans Pro', sans-serif;}
               </tr>
             </tbody>
           </table>
-          <!-- <div class="w3-container">
-            <h5 class="w3-opacity"><b>IFTO - CAMPUS PALMAS</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Técnico em Informática | 2015 - 2018</h6>
-            <p>Ensino Profissional Integrado ao Ensino Médio pelo Curso
-              Técnico de Informático para Internet</p>
-            <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>IFTO - CAMPUS PALMAS</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Tecnólogo em Sistemas para Internet | 2020 - 2023
-            </h6>
-            <p>Ensino Superior pelo Curso de Tecnologia Em Sistemas
-              para Internet, IFTO - Campus Palmas, 4º Semestre,
-              conclusão em 2023/2</p>
-            <hr>
-          </div> -->
+        </div>
+      </section>
+      <section>
+        <div class="w3-container w3-card w3-white div" id="contato" style="display:none;padding: 10px;">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Contato</h2>
+          <form action="#">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Primeiro Nome</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="primeironome" placeholder="Seu nome..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="Digite seu email..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="mensagem">Mensagem</label>
+              </div>
+              <div class="col-75">
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem..." style="height:200px"></textarea>
+              </div>
+            </div>
+            <br>
+            <div class="row" >
+              <button class="w3-button w3-teal" type="submit" value="Enviar" style="float:right">Enviar</button>
+            </div>
+            </form>
         </div>
       </section>
     </div>
