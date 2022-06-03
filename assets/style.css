@@ -79,6 +79,14 @@ input[type=submit]:hover {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+li{
+  float: left;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
