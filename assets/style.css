@@ -3,7 +3,7 @@ html,body,h1,h2,h3,h4,h5,h6 {     font-family: 'Source Sans Pro', sans-serif;}
   box-sizing: border-box;
 }
 h1{
-    font-size: 30px!important;
+    font-size: 30px;
 }
 input[type=text], select, textarea {
   width: 100%;
@@ -116,5 +116,11 @@ ul{
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
+  }
+  h1{
+    font-size: 24px!important;
+  }
+  h2{
+    font-size: 16px!important;
   }
 }
