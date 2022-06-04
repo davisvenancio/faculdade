@@ -1,0 +1,140 @@
+<html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Certificados</title>
+    <head>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .pagina{
+                display: grid;
+                grid-template-areas: "h" "mn" "ctd" "ctde" "rd";
+                row-gap: 1px;
+            }
+            .cabecalho{
+                grid-area: h;
+                background-color: #f1f1f1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            nav{
+                height: 100%;
+            }
+            
+            .titulo{
+                padding: 10px;
+            }
+            .logo{
+                width: 72px;
+            }
+            .menuPrincipal{
+                background-color: lightgrey;
+                grid-area: mn;
+            }
+            .itensMenu{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                
+            }
+            .itensMenu li{
+                list-style: none;
+            }
+            .itensMenu li a{
+                color: white;
+                list-style: none;
+            }
+            .conteudo{
+                background-color: lightgrey;
+                color: black;
+                grid-area: ctd;
+            }
+            .conteudo_extra{
+                color: white;
+                background-color: grey;
+                grid-area: ctde;
+            }
+            .rodape{
+                color: white;
+                background: grey;
+                width: 100%;
+                grid-area: rd;
+                position: fixed;
+                bottom: 0px;
+            }
+
+            @media screen and (min-width:480px){
+                .pagina{
+                    grid-template-areas: "h h "
+                                         "mn mn"
+                                         "ctd ctde"
+                                         "rd rd";
+                    column-gap: 2px;                                         
+                    row-gap: 2px;
+                    grid-template-columns: 2fr 1fr;
+                }
+                .cabecalho{
+                    flex-direction: row;
+                }
+                .titulo{
+                    width: 100%;
+                }
+            }
+            @media screen and (min-width: 1280px){
+                .pagina{
+                    grid-template-areas: "h h h"
+                                         "mn ctd ctde"
+                                         "rd rd rd";
+                    grid-template-columns: 1fr 4fr 2fr;
+                    row-gap: 3px;
+                    column-gap: 3px;
+                }
+
+                .itensMenu{
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <main class="pagina">
+            <header class="cabecalho">
+                <img class="logo"
+                     src="http://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png"
+                     alt="logo" />
+                <h1 class="titulo w3-text-teal">Meus Certificados</h1>
+            </header>
+
+            <nav class="menuPrincipal w3-card">
+                <ul class="itensMenu">
+                    <li><a href="https://drive.google.com/file/d/1Mz1WdP25Lm94evaG9oClCJMu4foZU1_s/view">Certificação 01</a></li>
+                    <li><a href="" >(Em breve)</a></li>
+                    <li><a href="">(Em breve)</a></li>
+                    <li><a href="">(Em breve)</a></li>
+                </ul>
+            </nav>
+            <article class="conteudo w3-card">
+                <h1 class="w3-center">Descrição</h1>
+               <p class="w3-padding">No dia 26 de maio concluí o curso "UX/UI & Prototype - App" de 32 horas, proporcionado pela Cel.Lep Idiomas e Estação Hack From Facebook</p>
+
+                <p class="w3-padding">Foi uma experiência muito enriquecedora e cheia de aprendizado. Ansioso para os próximos!</p>
+            </article>
+            <aside class="conteudo_extra w3-card">
+               <h1 class="w3-center">Informações</h1>
+               <p class="w3-padding">Curso ministrado pela <b>Escola de Programação Cel.Lep Tech</b> composto por <i>32 horas</i>, cumprindo todas as exigências requeridas</p>
+            </aside>
+            <footer class="rodape w3-card">
+                2022 @ David Venancio 
+            </footer>
+
+        </main>
+    </body>
+</html>
